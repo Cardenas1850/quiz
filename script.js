@@ -25,3 +25,31 @@ var questions = [
         answer: "quotes",
     }
 ];
+
+//setting basic variables 
+var questionList = 0;
+var currentTime = document.getElementById('time');
+var startQuiz = document.getElementById('start')
+var questionsDiv = document.getElementById('questionsPrint');
+
+// create code to start time on click of button
+//set time variables
+var timeReamining = 120;
+var holdInterval = 0;
+var timePenalty = 10;
+var ulCreate = document.createElement("ul");
+
+startQuiz.addEventListener("click", function () {
+    if (holdInterval === 0) {
+        holdInterval == setInterval(function () {
+            timeReamining--;
+            currentTime.textContent = "You have " + timeReamining + " seconds left";
+
+    if (timeReamining <= 0) {
+        clearInterval(holdInterval);
+        finishQuiz();/*write code to complete quiz*/
+        currentTime.textContent = "The quiz is complete";
+    }
+        },1000);
+    }
+});
