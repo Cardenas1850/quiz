@@ -52,4 +52,7 @@ startQuiz.addEventListener("click", function () {
     }
         },1000);
     }
+    render(questionList)
 });
+
+//create questions 
