@@ -138,12 +138,24 @@ createInput.textContent = "";
 
 questionsDiv.appendChild(createInput);
 
-var createSubmit = document.createElement("button");
-createSubmit.setAttribute("type", "submit");
-createSubmit.setAttribute("id", "submit");
-createSubmit.textContent = "Submit Score";
+var createScore = document.createElement("button");
+createScore.setAttribute("type", "submit");
+createScore.setAttribute("id", "submit");
+createScore.textContent = "Submit Score";
 
-questionsDiv.appendChild(createSubmit);
-}
+questionsDiv.appendChild(createScore);
+
 
 //local storage saving
+createScore.addEventListener("click", function () {
+var name = createInput.value;
+if (name === null) {
+    alert("please enter a name");
+} else {
+    var finalScore = {
+        name: name,
+        score: timeReamining
+    };
+    console.log(finalScore);
+}
+ });}
