@@ -1,0 +1,30 @@
+html {
+    background-color: black;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+
+li {
+    background-color: blueviolet;
+    margin-top: 10px;
+    font-size: 25px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#wrapper {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    border: 5px white solid;
+}
+
+#time {
+    text-align: center;
+    color: white;
+    margin-bottom: 15px;
+}

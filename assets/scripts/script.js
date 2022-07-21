@@ -23,7 +23,7 @@ var questions = [
         title:"String values must be enclosed within ___ when being assigned to variables",
         options:["commas", "curly brackets", "quotes", "parentheses"],
         answer: "quotes",
-    }
+    },
 ];
 
 //setting basic variables 
@@ -154,8 +154,19 @@ if (name === null) {
 } else {
     var finalScore = {
         name: name,
-        score: timeReamining
+        score: timeReamining,
     };
     console.log(finalScore);
+    var scores = localStorage.getItem("scores");
+    if (scores === null) {
+        scores =  [];
+    } else {
+        scores = JSON.parse(scores)
+    }
+    scores.push(finalScore);
+    var newScore = JSON.stringify(scores);
+    localStorage.setItem("scores", "newScore");
+    window.location.replace("highscores.html");
 }
- });}
+ });
+}
